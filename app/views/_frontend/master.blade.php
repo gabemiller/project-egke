@@ -9,13 +9,13 @@
     <title>{{Setting::get('site-title')}} @if(!empty($title)) {{'- '.$title }} @endif</title>
 
     <!--[if lt IE 9]>
-    {{ HTML::script('//html5shim.googlecode.com/svn/trunk/html5.js'); }}
+    {{ HTML::script('//html5shim.googlecode.com/svn/trunk/html5.js') }}
     <![endif]-->
     {{
-    HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext');
+    HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext')
     }}
-    {{ HTML::style('css/bootstrap.min.css'); }}
-    {{ HTML::style('css/divide.min.css'); }}
+    {{ HTML::style('css/bootstrap.min.css') }}
+    {{ HTML::style('css/divide.min.css') }}
 
 </head>
 <body>

@@ -5,6 +5,7 @@ html {
 body {
     margin-bottom: 60px;
     min-width: 960px;
+    font-family: 'Open Sans',sans-serif;
 }
 footer {
     position: absolute;
@@ -151,7 +152,7 @@ header .container .head {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 350px;
+    min-height: 500px;
     position: relative;
 }
 
@@ -210,11 +211,57 @@ header .container .head .main-navbar ul > li:hover > ul {
     box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.2);
 }
 
+/*Breadcrumbs*/
+
+.breadcrumb{
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*Links*/
+
+a,
+a:visited{
+    color: #FFB03B;
+    transition: color .2s ease-in 0s;
+}
+
+a:hover,
+a:active{
+    color: #FFB03B;
+}
 
 /*Articles*/
+
+.articles h4 a,
+.articles h4 a:visited{
+    color: inherit;
+}
+
+.articles h4 a:hover,
+.articles h4 a:active{
+    color: #FFB03B;
+    text-decoration: none;
+}
 
 .articles .article-content-short{
     overflow: hidden;
     max-height: 165px;
+    margin: 0 0 10px;
 }
 
+.btn-more,
+.btn-more:visited{
+    border: 2px solid #FFB03B;
+    color: #FFB03B;
+    transition: background-color .2s ease-in 0s;
+    font-weight: bold;
+}
+
+.btn-more:hover,
+.btn-more:active{
+    border: 2px solid #FFB03B;
+    color: #FFF;
+    background-color: #FFB03B;
+}
