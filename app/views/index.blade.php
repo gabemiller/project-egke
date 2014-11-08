@@ -10,27 +10,19 @@
 
 @section('content')
 
-@foreach($articles as $article)
-<div class="article">
-    <h3>{{HTML::link($article->getLink(),$article->title)}}</h3>
 
-    <p class="article-datas">
-        <i class="fa fa-user"></i> {{$article->getAuthorName()}} <i class="fa fa-clock-o"></i>
-        {{$article->getCreatedAt() }}
-
-        @if(sizeof($article->tagNames()) > 0)
-        <i class="fa fa-tag"></i>
-        @foreach(\Divide\Helper\Tag::getTagByName($article->tagNames()) as $tag)
-        <span>{{HTML::linkRoute('hirek.tag',$tag->name,array('id'=>$tag->id,'tagSlug'=>\Str::slug($tag->slug)))}}</span>
-        @endforeach
-        @endif
-    </p>
-
+<div class="row">
+    @foreach($articles as $article)
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="articles">
+            <img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5">
+            <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
+            <div class="article-content-short">{{$article->content}}</div>
+            {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn-article-more'))}}
+        </div>
+    </div>
+    @endforeach
 </div>
-@endforeach
 
-<div class="text-center">
-    {{$articles->links();}}
-</div>
 
 @stop

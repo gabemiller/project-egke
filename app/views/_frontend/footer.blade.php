@@ -1,11 +1,10 @@
 
 <footer>
     <div class="container">
-        <div class="footer text-center">
-            <img src="{{URL::asset('assets/smgkob_blue_mini.svg')}}" height="100">
-            <p>{{Setting::get('site-title')}}<br>
-                © {{date('Y')}} Minden jog fenntartva.
-            </p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p>{{date('Y')}} © Encsi Görögkatolikus Egyházközség. Dícsőség Jézus Krisztusnak!</p>
+            </div>
         </div>
     </div>
 </footer>

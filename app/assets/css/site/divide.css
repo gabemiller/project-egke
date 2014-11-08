@@ -2,193 +2,219 @@ html {
     position: relative;
     min-height: 100%;
 }
-
 body {
-    margin-bottom: 300px;
-    background: url('../assets/bg.png') left top repeat #fefefe;
+    margin-bottom: 60px;
+    min-width: 960px;
 }
-
-.navbar .navbar-brand{
-    font-size: 14px;
-}
-
-header{
-    background: url('../img/header.jpg') center center no-repeat #fff;
-    background-size: cover;
-    margin: 0 0 20px;
-}
-
-header .bg-darker{
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
-    padding: 100px 60px;
-    margin: 0;
-}
-
-header .bg-darker h1,
-header .bg-darker h2,
-header .bg-darker h3,
-header .bg-darker h4,
-header .bg-darker h5,
-header .bg-darker h6,
-header .bg-darker a,
-header .bg-darker a:visited{
-    color: #ffffff;
-}
-
-header .bg-darker h1{
-    font-size: 60px;
-}
-
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    margin-top:40px;
-    background-color: transparent;
+    height: 40px;
+    background-color: #b64926;
 }
 
-footer .footer p{
-    margin: 5px 0 0;
-    color: #0085a1;
-    font-size: 75%;
+footer .container{
+    background-color: #8E2800;
+    color: #fff;
+    min-height: 40px;
+    font-weight: bold;
 }
 
-.main-container{
-    border-top: 3px solid #0085a1;
-    background-color: rgba(255,255,255,0.6);
-    padding: 10px;
-}
-
-/**
- * Article
- */
-
-.article{
-    margin: 0 0 10px;
-    padding: 10px;
-}
-
-.article i{
-    color: #0085a1;
-}
-
-.article h3{
-    margin: 0 0 5px;
-}
-
-.article .article-datas{
-    margin: 5px 0 0;
-    font-size: 75%;
-}
-
-.article p{
+footer .container p{
     margin: 0;
+    padding: 0;
+    line-height: 40px;
 }
 
-/**
- * Breadcrumb
- */
+/* Don't let the lead text change font-size. */
+.lead {
+    font-size: 16px;
+}
 
-.breadcrumb{
-    background-color: transparent !important;
+/* Finesse the page header spacing */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header .lead {
     margin-bottom: 10px;
 }
 
-/**
- * Documents
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
  */
 
-table thead tr th h1,
-table tbody tr td h1,
-table thead tr th h2,
-table tbody tr td h2,
-table thead tr th h3,
-table tbody tr td h3,
-table thead tr th h4,
-table tbody tr td h4,
-table thead tr th h5,
-table tbody tr td h5,
-table thead tr th h6,
-table tbody tr td h6{
-    margin: 0 0 10px;
+/* Reset the container */
+.container {
+    width: 960px;
+    max-width: none !important;
 }
 
-.table-middle tr td{
-    vertical-align: middle !important;
+.container .navbar-header,
+.container .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
 }
 
-.list-category li{
-    padding: 5px 0;
-    border-bottom: 1px solid #dddddd;
+/* Always float the navbar header */
+.navbar-header {
+    float: left;
 }
 
-.list-category li:last-of-type{
-    border-bottom: none;
+/* Undo the collapsing navbar */
+.navbar-collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
 }
 
-.table-col-xs{
-    width: 50px;
+.navbar-toggle {
+    display: none;
 }
 
-.table-col-sm{
-    width: 100px;
+.navbar-collapse {
+    border-top: 0;
 }
 
-.table-col-md{
-    width: 150px;
+.navbar-brand {
+    margin-left: -15px;
 }
 
-.table-col-lg{
-    width: 250px;
+/* Always apply the floated nav */
+.navbar-nav {
+    float: left;
+    margin: 0;
 }
 
-/**
- * Dropdown menu
- */
+.navbar-nav > li {
+    float: left;
+}
 
-.dropdown-submenu {
+.navbar-nav > li > a {
+    padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+    float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+    position: absolute;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-width: 0 1px 1px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #333;
+}
+
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff !important;
+    background-color: #428bca !important;
+}
+
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #999 !important;
+    background-color: transparent !important;
+}
+
+/**/
+header {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px;
+    background: url("../assets/bg.jpg") center center no-repeat transparent;
+    background-size: cover;
+    border-bottom: 2px solid #b64926;
+}
+
+header .container .head {
+    background: url("../assets/header.jpg") center center no-repeat transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 350px;
     position: relative;
 }
 
-.dropdown-submenu>.dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -6px;
-    margin-left: -1px;
-}
-
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-}
-
-.dropdown-submenu>a:after {
-    display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
-    margin-top: 5px;
-    margin-right: -10px;
-}
-
-.dropdown-submenu:hover>a:after {
-    border-left-color: #fff;
-}
-
-.navbar-right .dropdown-submenu {
-    float: none;
-}
-
-.navbar-right .dropdown-submenu>.dropdown-menu {
+header .container .head .main-navbar {
+    position: absolute;
+    bottom: 0;
     left: 0;
-    margin-left: -100%;
+    width: 100%;
+    background-color: #b64926;
+}
+
+header .container .head .main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .container .head .main-navbar ul li a,
+header .container .head .main-navbar ul li a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding: 8px;
+}
+
+header .container .head .main-navbar ul li a:active,
+header .container .head .main-navbar ul li a:hover {
+    color: #FFF0A5;
+}
+
+header .container .head .main-navbar ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+header .container .head .main-navbar ul > li:hover {
+    background-color: #8E2800;
+}
+
+header .container .head .main-navbar ul > li > ul {
+    display: none;
+}
+
+header .container .head .main-navbar ul > li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #8E2800;
+    margin: 36px 0 0;
+    z-index: 100;
+    min-width: 100%;
+    box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.2);
 }
 
 
+/*Articles*/
+
+.articles .article-content-short{
+    overflow: hidden;
+    max-height: 165px;
+}
 
