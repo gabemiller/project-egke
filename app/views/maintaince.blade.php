@@ -24,6 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+                <img class="no-border" src="assets/cross.svg" alt="Görögkatolikus kereszt">
                 <h2>Encsi Görögkatolikus Egyházközség</h2>
                 <h3>Dicsőség Jézus Krisztusnak!</h3>
                 <h1>Weboldalunk hamarosan megnyitja kapuit.<br>Kérem látogasson vissza később!</h1>
@@ -35,7 +36,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <p class="lead">Közelgő eseményünk. Várunk mindenkit szeretettel!</p>
-                <img class="img-responsive" src="assets/plakat4.jpg">
+                <img class="img-responsive" src="assets/plakat4.jpg" alt="Mézeskalács Kapu Napja 3.">
             </div>
         </div>
     </div>
