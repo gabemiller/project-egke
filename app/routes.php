@@ -19,7 +19,7 @@ Route::pattern('categoryí', '[0-9A-z_-]+');
  */
 
 Route::get('hamarosan',['as'=>'maintaince','uses'=>function(){
-    return View::make('maintaince');
+    return View::make('maintaince')->withTitle('hamarosan');
 }]);
 
 Route::group(array('namespace' => 'Site'), function () {
