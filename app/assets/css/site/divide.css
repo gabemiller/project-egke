@@ -279,3 +279,7 @@ body.maintaince{
 body.maintaince header{
     background-image: none;
 }
+
+body.maintaince img{
+    border: 10px solid #8E2800;
+}
