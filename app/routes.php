@@ -18,6 +18,10 @@ Route::pattern('categoryí', '[0-9A-z_-]+');
  *
  */
 
+Route::get('hamarosan',['as'=>'maintaince','uses'=>function(){
+    return View::make('maintaince');
+}]);
+
 Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('/', ['uses' => 'HomeController@index', 'as' => 'fooldal']);

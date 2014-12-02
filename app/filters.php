@@ -11,16 +11,9 @@
   |
  */
 
-App::before(function($request) {
+App::before(function ($request) {
 
-    Event::fire('clockwork.controller.start');
-
-    /**
-     * A láblévben megjelenő cikkek objektumát hozza létre.
-     */
-    if (!Request::is('admin') && !Request::is('admin/*')) {
-        View::share('articleFooter', \Divide\CMS\Article::orderBy('created_at', 'desc')->take('3')->get(['id','title','author_id','created_at']));
-    }
+    //Event::fire('clockwork.controller.start');
 
     /**
      * A felhasználó objektumát hozza létre!.
@@ -30,10 +23,9 @@ App::before(function($request) {
     }
 
 
-    /* if(Request::path()!='/')
-      {
-      return Redirect::to('/');
-      } */
+    if (Request::path() != 'hamarosan') {
+        return Redirect::to('hamarosan');
+    }
 
     /* if( ! Request::secure() && FALSE)
       {
@@ -42,8 +34,8 @@ App::before(function($request) {
 });
 
 
-App::after(function($request, $response) {
-    Event::fire('clockwork.controller.end');
+App::after(function ($request, $response) {
+    //Event::fire('clockwork.controller.end');
 });
 
 /*
@@ -57,13 +49,13 @@ App::after(function($request, $response) {
   |
  */
 
-Route::filter('auth', function() {
+Route::filter('auth', function () {
     if (Auth::guest())
         return Redirect::guest('login');
 });
 
 
-Route::filter('auth.basic', function() {
+Route::filter('auth.basic', function () {
     return Auth::basic();
 });
 
@@ -72,13 +64,13 @@ Route::filter('auth.basic', function() {
  *
  * Checks if the user is logged in
  */
-Route::filter('userNotLoggedIn', function() {
+Route::filter('userNotLoggedIn', function () {
     if (!Sentry::check()) {
         return Redirect::route('admin.bejelentkezes');
     }
 });
 
-Route::filter('userLoggedIn', function() {
+Route::filter('userLoggedIn', function () {
     if (Sentry::check()) {
         return Redirect::route('admin.vezerlopult');
     }
@@ -89,7 +81,7 @@ Route::filter('userLoggedIn', function() {
  *
  * Check if the user has permission (group/user)
  */
-Route::filter('hasAccess', function($route, $request, $value) {
+Route::filter('hasAccess', function ($route, $request, $value) {
     try {
         $user = Sentry::getUser();
 
@@ -106,7 +98,7 @@ Route::filter('hasAccess', function($route, $request, $value) {
  *
  * Check if the user belongs to a group
  */
-Route::filter('inGroup', function($route, $request, $value) {
+Route::filter('inGroup', function ($route, $request, $value) {
     try {
         $user = Sentry::getUser();
 
@@ -134,7 +126,7 @@ Route::filter('inGroup', function($route, $request, $value) {
   |
  */
 
-Route::filter('guest', function() {
+Route::filter('guest', function () {
     if (Auth::check()) {
         return Redirect::to('/');
     }
@@ -151,7 +143,7 @@ Route::filter('guest', function() {
   |
  */
 
-Route::filter('csrf', function() {
+Route::filter('csrf', function () {
     if (Session::token() != Input::get('_token')) {
         throw new Illuminate\Session\TokenMismatchException;
     }

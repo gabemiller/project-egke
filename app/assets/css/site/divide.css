@@ -7,6 +7,7 @@ body {
     min-width: 960px;
     font-family: 'Open Sans',sans-serif;
 }
+
 footer {
     position: absolute;
     bottom: 0;
@@ -264,4 +265,17 @@ a:active{
     border: 2px solid #FFB03B;
     color: #FFF;
     background-color: #FFB03B;
+}
+
+
+/* Maintaince */
+
+body.maintaince{
+    background-color:  #b64926;
+    color: #ffffff;
+    text-align: center;
+}
+
+body.maintaince header{
+    background-image: none;
 }

@@ -13,7 +13,7 @@
 
 <div class="row">
     @foreach($articles as $article)
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="col-xs-4">
         <div class="articles">
             <img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5">
             <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
@@ -26,13 +26,13 @@
 
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12">
 
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-xs-12">
         <div class="owl-carousel">
             @for($i=0;$i<10;$i++)
             <div class="text-center">
