@@ -35,8 +35,6 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <p class="lead">Közelgő eseményünk. Várunk mindenkit szeretettel!</p>
-                <img class="img-responsive" src="assets/plakat4.jpg" alt="Mézeskalács Kapu Napja 3.">
             </div>
         </div>
     </div>
