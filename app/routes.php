@@ -46,6 +46,16 @@ Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('dokumentumok/{category?}', ['uses' => 'DocumentController@index', 'as' => 'dokumentumok.index']);
 
+    Route::get('kep/{name}/{id}',['uses'=>function($name,$id){
+        $img =  Image::make(URL::to('/img/gallery/'.$id.'/'.$name))->fit(300,200);
+
+        $response = Response::make($img->encode('jpg'));
+
+        $response->header('Content-Type', 'image/jpg');
+
+        return $response;
+    },'as'=>'kep.show']);
+
 });
 
 

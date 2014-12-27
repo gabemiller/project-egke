@@ -11,10 +11,10 @@
         @foreach($articles as $article)
             <div class="col-xs-4">
                 <div class="articles">
-                    @if(count($event->gallery)!=0 && count($event->gallery->pictures)!=0)
-                        <img class="img-responsive" src="{{$event->gallery->pictures[0]->thumbnail_path}}"
-                             alt="{{$event->gallery->pictures[0]->name}}"
-                             title="{{$event->gallery->pictures[0]->name}}"/>
+                    @if(count($article->gallery) && count($article->gallery->pictures))
+                        <img class="img-responsive" src="{{URl::route('kep.show',['name'=>$article->gallery->pictures[0]->name,'id'=>$article->gallery->pictures[0]->gallery_id]) }}"
+                             alt="{{$article->gallery->pictures[0]->name}}"
+                             title="{{$article->gallery->pictures[0]->name}}"/>
                     @endif
                     <!--img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5"-->
                     <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
