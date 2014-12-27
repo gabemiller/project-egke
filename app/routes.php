@@ -7,7 +7,7 @@
 Route::pattern('title', '[0-9A-z_-]+');
 Route::pattern('id', '[0-9]+');
 Route::pattern('tagSlug', '[0-9A-z_-]+');
-Route::pattern('categoryí', '[0-9A-z_-]+');
+Route::pattern('category', '[0-9A-z_-]+');
 
 /**
  * -----------------------------------------------------------------------------

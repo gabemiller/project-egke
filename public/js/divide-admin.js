@@ -45,6 +45,23 @@ $(function () {
         lang: 'hu-HU'
     });
 
+
+    /**
+     * -------------------------------------------------------------------------
+     * Ckeditor
+     * -------------------------------------------------------------------------
+     *
+     *
+     */
+
+    $('.ckeditor').ckeditor({
+        //'filebrowserBrowseUrl': '/elfinder/ckeditor4',
+        'contentsCss': '/ckeditor/css/bootstrap.css',
+        'removePlugins': 'scayt',
+        'skin': 'bootstrapck'
+    });
+
+
     /**
      * -------------------------------------------------------------------------
      * BootstrapSwitch
@@ -405,8 +422,8 @@ $(function () {
      * Menütípus tab váltás
      */
 
-    $('select[name=type]').change(function(){
-        $('a[href="#'+$(this).val()+'"]').tab('show');
+    $('select[name=type]').change(function () {
+        $('a[href="#' + $(this).val() + '"]').tab('show');
     });
 
     /**

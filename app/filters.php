@@ -13,7 +13,7 @@
 
 App::before(function ($request) {
 
-    //Event::fire('clockwork.controller.start');
+
 
     /**
      * A felhasználó objektumát hozza létre!.
@@ -23,9 +23,9 @@ App::before(function ($request) {
     }
 
 
-    if (Request::path() != 'hamarosan') {
+    /*if (Request::path() != 'hamarosan') {
         return Redirect::to('hamarosan');
-    }
+    }*/
 
     /* if( ! Request::secure() && FALSE)
       {
@@ -35,7 +35,7 @@ App::before(function ($request) {
 
 
 App::after(function ($request, $response) {
-    //Event::fire('clockwork.controller.end');
+
 });
 
 /*

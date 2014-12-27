@@ -6,16 +6,15 @@
     "require": {
         "laravel/framework": "4.2.*",
         "davejamesmiller/laravel-breadcrumbs": "~2.2.1",     
-        "rtconner/laravel-tagging": "dev-master",
+        "rtconner/laravel-tagging": "~0.4",
         "cartalyst/sentry": "2.1.*",
         "intervention/image": "2.*",
-        "lavary/laravel-menu": "dev-master",
         "ryannielson/meta": "1.1.*",
         "philf/setting": "dev-master",
-        "jenssegers/date": "*"
+        "jenssegers/date": "*",
+        "lavary/laravel-menu": "1.5.0"
     },
     "require-dev": {
-        "itsgoingd/clockwork": "dev-master",
         "way/generators": "2.*",
         "barryvdh/laravel-ide-helper": "1.*"
     },

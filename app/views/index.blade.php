@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div class="row">
+<!--div class="row">
     <div class="col-xs-12">
         <div class="owl-carousel">
             @for($i=0;$i<10;$i++)
@@ -43,6 +43,6 @@
             @endfor
         </div>
     </div>
-</div>
+</div-->
 
 @stop
