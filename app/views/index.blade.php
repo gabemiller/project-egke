@@ -1,37 +1,39 @@
 @extends('_frontend.master')
 
-@section('page-title')
-<img src="assets/smgkob_white_mini.svg" height="300">
-@stop
-
 @section('breadcrumb')
-{{ HTML::decode(Breadcrumbs::render('fooldal')) }}
+    {{ HTML::decode(Breadcrumbs::render('fooldal')) }}
 @stop
 
 @section('content')
 
 
-<div class="row">
-    @foreach($articles as $article)
-    <div class="col-xs-4">
-        <div class="articles">
-            <img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5">
-            <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
-            <div class="article-content-short">{{$article->content}}</div>
-            {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn btn-sm btn-more'))}}
+    <div class="row">
+        @foreach($articles as $article)
+            <div class="col-xs-4">
+                <div class="articles">
+                    @if(count($event->gallery)!=0 && count($event->gallery->pictures)!=0)
+                        <img class="img-responsive" src="{{$event->gallery->pictures->first()->thumbnail_path}}"
+                             alt="{{$event->gallery->pictures->first()->name}}"
+                             title="{{$event->gallery->pictures->first()->name}}"/>
+                    @endif
+                    <!--img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5"-->
+                    <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
+
+                    <div class="article-content-short">{{$article->content}}</div>
+                    {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn btn-sm btn-more'))}}
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+
         </div>
     </div>
-    @endforeach
-</div>
 
-
-<div class="row">
-    <div class="col-xs-12">
-
-    </div>
-</div>
-
-<!--div class="row">
+    <!--div class="row">
     <div class="col-xs-12">
         <div class="owl-carousel">
             @for($i=0;$i<10;$i++)
@@ -41,8 +43,8 @@
                 <p>- Subsidere Viseret</p>
             </div>
             @endfor
+            </div>
         </div>
-    </div>
-</div-->
+    </div-->
 
 @stop
