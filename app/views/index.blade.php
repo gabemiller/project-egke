@@ -12,9 +12,9 @@
             <div class="col-xs-4">
                 <div class="articles">
                     @if(count($event->gallery)!=0 && count($event->gallery->pictures)!=0)
-                        <img class="img-responsive" src="{{$event->gallery->pictures->first()->thumbnail_path}}"
-                             alt="{{$event->gallery->pictures->first()->name}}"
-                             title="{{$event->gallery->pictures->first()->name}}"/>
+                        <img class="img-responsive" src="{{$event->gallery->pictures()->first()->thumbnail_path}}"
+                             alt="{{$event->gallery->pictures()->first()->name}}"
+                             title="{{$event->gallery->pictures()->first()->name}}"/>
                     @endif
                     <!--img class="img-responsive" src="http://placehold.it/300x200/468966/FFF0A5"-->
                     <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
