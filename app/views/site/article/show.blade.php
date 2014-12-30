@@ -24,11 +24,11 @@
         <h4>Galéria</h4>
 
         <div class="article-gallery">
-            <div class="owl-carousel">
+            <div class="article-carousel owl-carousel">
                 @foreach($article->gallery->pictures as $picture)
                     <div>
-                        <a href="{{$picture->picture_path}}" title="{{$picture->name}}" data-gallery>
-                            <img class="img-responsive" src="{{$picture->thumbnail_path}}" alt="{{$picture->name}}"
+                        <a href="{{URL::to($picture->picture_path)}}" title="{{$picture->name}}" data-gallery>
+                            <img class="img-responsive" src="{{URL::to($picture->thumbnail_path)}}" alt="{{$picture->name}}"
                                  title="{{$picture->name}}"/>
                         </a>
                     </div>

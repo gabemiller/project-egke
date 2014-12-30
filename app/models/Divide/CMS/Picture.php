@@ -2,6 +2,10 @@
 
 namespace Divide\CMS;
 
+use Image;
+use URL;
+use Response;
+
 /**
  * Divide\CMS\Picture
  *

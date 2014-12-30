@@ -6,8 +6,11 @@
 
 Route::pattern('title', '[0-9A-z_-]+');
 Route::pattern('id', '[0-9]+');
+Route::pattern('width', '[0-9]+');
+Route::pattern('height', '[0-9]+');
 Route::pattern('tagSlug', '[0-9A-z_-]+');
 Route::pattern('category', '[0-9A-z_-]+');
+Route::pattern('image', '[0-9A-z_-]+');
 
 /**
  * -----------------------------------------------------------------------------
@@ -46,15 +49,7 @@ Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('dokumentumok/{category?}', ['uses' => 'DocumentController@index', 'as' => 'dokumentumok.index']);
 
-    Route::get('kep/{name}/{id}',['uses'=>function($name,$id){
-        $img =  Image::make(URL::to('/img/gallery/'.$id.'/'.$name))->fit(300,200);
-
-        $response = Response::make($img->encode('jpg'));
-
-        $response->header('Content-Type', 'image/jpg');
-
-        return $response;
-    },'as'=>'kep.show']);
+    Route::get('kep/{id}/{width}/{height}/{name}/{image?}',['uses'=>'GalleryController@resize','as'=>'kep.show']);
 
 });
 
