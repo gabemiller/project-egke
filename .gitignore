@@ -1,7 +1,6 @@
 app/config/developement
 app/config/testing
 app/assets
-nbproject
 vendor/*
 .idea
 gulpfile.js

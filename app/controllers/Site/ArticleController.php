@@ -11,6 +11,22 @@ class ArticleController extends \BaseController {
 
     protected $layout = '_frontend.master';
 
+
+    /**
+     *
+     */
+    public function index() {
+        View::share('title', 'Főoldal');
+
+        $article = Article::where('published', '=', true)
+            ->orderBy('created_at', 'DESC')
+            ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
+            ->paginate(6);
+
+        $this->layout->content = View::make('index')
+            ->with('articles', $article);
+    }
+
     /**
      * Display the specified resource.
      * GET /site/article/{id}
@@ -24,7 +40,9 @@ class ArticleController extends \BaseController {
         
         View::share('title', $article->title);
         
-        $this->layout->content = View::make('site.article.show')->with('article', $article)->with('url',Request::url());
+        $this->layout->content = View::make('site.article.show')
+            ->with('article', $article)
+            ->with('url',Request::url());
     }
     
     /**
@@ -33,13 +51,18 @@ class ArticleController extends \BaseController {
      */
     public function tag($id) {
         
-        $tag = Tag::where('id','=',$id)->first(['id','name']);
+        $tag = Tag::where('id','=',$id)
+            ->first(['id','name']);
         
         View::share('title', 'Hírek: '.$tag->name);
         
-        $article = Article::withAnyTag($tag->name)->orderBy('created_at','desc')->paginate(10);
+        $article = Article::withAnyTag($tag->name)
+            ->orderBy('created_at','desc')
+            ->paginate(6);
 
-        $this->layout->content = View::make('site.article.tag')->with('articles',$article)->with('tag',$tag);
+        $this->layout->content = View::make('site.article.tag')
+            ->with('articles',$article)
+            ->with('tag',$tag);
     }
 
 }

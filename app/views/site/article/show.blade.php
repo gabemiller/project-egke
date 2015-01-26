@@ -20,6 +20,8 @@
         {{$article->content}}
     </div>
 
+    <div>{{ Shareable::all() }}</div>
+
     @if(count($article->gallery)!=0 && count($article->gallery->pictures)!=0)
         <h4>Galéria</h4>
 

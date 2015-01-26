@@ -18,9 +18,13 @@ class HomeController extends \BaseController {
     public function index() {
         View::share('title', 'Főoldal');
 
-        $article = Article::where('published', '=', true)->orderBy('created_at', 'DESC')->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])->paginate(10);
+        $article = Article::where('published', '=', true)
+            ->orderBy('created_at', 'DESC')
+            ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
+            ->paginate(10);
 
-        $this->layout->content = View::make('index')->with('articles', $article);
+        $this->layout->content = View::make('index')
+            ->with('articles', $article);
     }
 
 }

@@ -10,7 +10,7 @@
 
     <p class="small">
         <strong>{{$article->getAuthorName()}}</strong> <br>
-        {{$article->getCreateDate()}}
+        {{$article->getCreatedAt()}}
     </p>
 
     <p class="text-justify">{{$article->getParragraph()}}</p>
