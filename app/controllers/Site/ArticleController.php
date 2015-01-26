@@ -57,6 +57,7 @@ class ArticleController extends \BaseController {
         View::share('title', 'Hírek: '.$tag->name);
         
         $article = Article::withAnyTag($tag->name)
+            ->where('published', '=', true)
             ->orderBy('created_at','desc')
             ->paginate(6);
 

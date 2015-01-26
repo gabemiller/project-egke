@@ -1,12 +1,4 @@
-@extend('_frontend.master')
-
-@section('page-title')
-<h1>{{HTML::link($article->getLink(),$article->title)}}</h1>
-<h4>
-    <i class="fa fa-user"></i> {{$article->getAuthorName()}} <i class="fa fa-clock-o"></i> {{$article->getCreatedAt()}}
-</h4>
-@stop
-
+@extends('_frontend.master')
 @section('breadcrumb')
 {{ HTML::decode(Breadcrumbs::render('hirek.show',$article)) }}
 @stop
@@ -14,7 +6,7 @@
 @section('content')
 <div class="article">
 
-    <h2 class="article-title">{{$article->title}}</h2>
+    <h1>{{HTML::link($article->getLink(),$article->title)}}</h1>
 
     <div class="article-content">
         {{$article->content}}
