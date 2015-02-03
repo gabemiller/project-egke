@@ -29,7 +29,7 @@ Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('/', ['uses' => 'HomeController@index', 'as' => 'fooldal']);
 
-    Route::get('hirek', ['uses' => 'HomeController@index', 'as' => 'hirek.index']);
+    Route::get('hirek', ['uses' => 'ArticleController@index', 'as' => 'hirek.index']);
 
     Route::get('hirek/{id}/{title}', ['uses' => 'ArticleController@show', 'as' => 'hirek.show']);
 
