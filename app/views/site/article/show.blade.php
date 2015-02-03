@@ -6,12 +6,12 @@
 @section('content')
 <div class="article">
 
-    <h1>{{HTML::link($article->getLink(),$article->title)}}</h1>
+    <h1>{{$article->title}}</h1>
 
     <div class="article-content">
         {{$article->content}}
     </div>
-    
+
     @if(count($article->gallery)!=0 && count($article->gallery->pictures)!=0)
         <h4>Galéria</h4>
 

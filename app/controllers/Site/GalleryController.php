@@ -47,16 +47,19 @@ class GalleryController extends \BaseController
 
 
     /**
-     * @param $id
      * @param $width
      * @param $height
      * @param $name
-     * @param string $image
-     * @return mixed
+     * @param $image
+     * @return \Illuminate\Http\Response
      */
-    public function resize($id, $width, $height, $name)
+    public function resize($width, $height, $url)
     {
-        $img = Image::make(URL::to('/img/gallery/' . $id . '/' . $name))->fit($width, $height);
+        //$img = Image::make(URL::to(urldecode($url)))->fit($width, $height);
+
+        $img = Image::cache(function ($image) use ($width, $height, $url) {
+            return $image->make(URL::to(urldecode($url)))->fit($width, $height);
+        }, 10, true);
 
         $response = Response::make($img->encode('jpg'));
 

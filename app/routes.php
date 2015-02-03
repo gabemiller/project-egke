@@ -49,7 +49,7 @@ Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('dokumentumok/{category?}', ['uses' => 'DocumentController@index', 'as' => 'dokumentumok.index']);
 
-    Route::get('kep/{id}/{width}/{height}/{name}/{image?}',['uses'=>'GalleryController@resize','as'=>'kep.show']);
+    Route::get('kep/{width}/{height}/{url}',['uses'=>'GalleryController@resize','as'=>'kep.show']);
 
 });
 

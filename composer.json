@@ -12,7 +12,8 @@
         "ryannielson/meta": "1.1.*",
         "philf/setting": "dev-master",
         "jenssegers/date": "*",
-        "lavary/laravel-menu": "1.5.0"
+        "lavary/laravel-menu": "1.5.0",
+        "intervention/imagecache": "~2.1"
     },
     "require-dev": {
         "way/generators": "2.*",
