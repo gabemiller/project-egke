@@ -23,7 +23,7 @@ class ArticleController extends \BaseController {
             ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
             ->paginate(6);
 
-        $this->layout->content = View::make('index')
+        $this->layout->content = View::make('site.article.index')
             ->with('articles', $article);
     }
 
