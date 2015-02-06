@@ -1,4 +1,7 @@
 @extends('_frontend.master')
+@section('breadcrumb')
+    {{ HTML::decode(Breadcrumbs::render('hirek.index')) }}
+@stop
 @section('content')
     <div class="row">
         @foreach($articles as $article)

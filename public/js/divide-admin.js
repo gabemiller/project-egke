@@ -58,7 +58,8 @@ $(function () {
         //'filebrowserBrowseUrl': '/elfinder/ckeditor4',
         'contentsCss': '/ckeditor/css/bootstrap.css',
         'removePlugins': 'scayt',
-        'skin': 'bootstrapck'
+        'skin': 'bootstrapck',
+        'allowedContent':true
     });
 
 
