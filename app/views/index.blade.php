@@ -59,25 +59,6 @@
                         <p class="qoute-author">- {{{$quote->author}}}</p>
                     </div>
                 @endforeach
-                <div class="text-center">
-                    <i class="fa fa-quote-left fa-4x quote-icon"></i>
-
-                    <p class="qoute-text">Mennyei hazánkból kaptunk levelet. Ez a Szentírás, amely megtanít minket, hogy
-                        jó életet
-                        éljünk.</p>
-
-                    <p class="qoute-author">- Szent Ágoston</p>
-                </div>
-
-                <div class="text-center">
-                    <i class="fa fa-quote-left fa-4x quote-icon"></i>
-
-                    <p class="quote-text">Az ember akkor van a legjobb állapotában, ha az életét úgy éli meg, mintegy
-                        utazás az örök élet
-                        felé és ehhez igazítja teljesen érzelmeit</p>
-
-                    <p class="qoute-author">- Szent Ágoston</p>
-                </div>
 
             </div>
         </div>
