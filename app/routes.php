@@ -79,7 +79,7 @@ if (!Request::is('admin') && !Request::is('admin/*')) {
         $menu->add('Keresztény élet erőforrásai', ['url' => URL::to('#')]);
         $menu->add('Katekézis', ['url' => URL::to('#')]);
         $menu->add('Jelentkezés keresztelőre, esküvőre', ['url' => URL::to('#')]);
-        $menu->add('Nélkülözők megsegítése', ['url' => URL::to('#')]);
+        $menu->add('Nélkülözők megsegítése', ['url' => URL::to('/oldal/14/nelkulozok-megsegitese-mit-kell-tennem')]);
         $menu->add('Támogatóink', ['url' => URL::to('#')]);
     });
 }
