@@ -13,14 +13,7 @@
                  src="{{URl::route('kep.show',['url'=>urlencode('assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
                  alt="Jézus Krisztus"
                  title="Jézus Krisztus"/>
-            <ul class="list-unstyled mainpage-menu">
-                <li>{{HTML::link('#','Az Egyház életmentő állomás')}}</li>
-                <li>{{HTML::link('#','Keresztény élet erőforrásai')}}</li>
-                <li>{{HTML::link('#','Katekézis')}}</li>
-                <li>{{HTML::link('#','Jelentkezés keresztelőre, esküvőre')}}</li>
-                <li>{{HTML::link('#','Nélkülözők megsegítése')}}</li>
-                <li>{{HTML::link('#','Támogatóink')}}</li>
-            </ul>
+            {{$secondMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
         </div>
         <div class="col-xs-8">
             <div class="row">
@@ -50,17 +43,27 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="mainpage-divider">
-                <h3>Olvasd naponta a Szentírást!</h3>
+                <h3>A mai nap gondolata</h3>
                 <hr>
             </div>
 
 
             <div class="quote-carousel owl-carousel">
 
+                @foreach($quotes as $quote)
+                    <div class="text-center">
+                        <i class="fa fa-quote-left fa-4x quote-icon"></i>
+
+                        <p class="qoute-text">{{{$quote->quote}}}</p>
+
+                        <p class="qoute-author">- {{{$quote->author}}}</p>
+                    </div>
+                @endforeach
                 <div class="text-center">
                     <i class="fa fa-quote-left fa-4x quote-icon"></i>
 
-                    <p class="qoute-text">Mennyei hazánkból kaptunk levelet. Ez a Szentírás, amely megtanít minket, hogy jó életet
+                    <p class="qoute-text">Mennyei hazánkból kaptunk levelet. Ez a Szentírás, amely megtanít minket, hogy
+                        jó életet
                         éljünk.</p>
 
                     <p class="qoute-author">- Szent Ágoston</p>
@@ -69,7 +72,8 @@
                 <div class="text-center">
                     <i class="fa fa-quote-left fa-4x quote-icon"></i>
 
-                    <p class="quote-text">Az ember akkor van a legjobb állapotában, ha az életét úgy éli meg, mintegy utazás az örök élet
+                    <p class="quote-text">Az ember akkor van a legjobb állapotában, ha az életét úgy éli meg, mintegy
+                        utazás az örök élet
                         felé és ehhez igazítja teljesen érzelmeit</p>
 
                     <p class="qoute-author">- Szent Ágoston</p>

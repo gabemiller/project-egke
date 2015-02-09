@@ -21,7 +21,7 @@ Route::pattern('image', '[0-9A-z_-]+');
  *
  */
 
-Route::get('hamarosan',['as'=>'maintaince','uses'=>function(){
+Route::get('hamarosan', ['as' => 'maintaince', 'uses' => function () {
     return View::make('maintaince')->withTitle('hamarosan');
 }]);
 
@@ -49,7 +49,7 @@ Route::group(array('namespace' => 'Site'), function () {
 
     Route::get('dokumentumok/{category?}', ['uses' => 'DocumentController@index', 'as' => 'dokumentumok.index']);
 
-    Route::get('kep/{width}/{height}/{url}',['uses'=>'GalleryController@resize','as'=>'kep.show']);
+    Route::get('kep/{width}/{height}/{url}', ['uses' => 'GalleryController@resize', 'as' => 'kep.show']);
 
 });
 
@@ -68,9 +68,19 @@ if (!Request::is('admin') && !Request::is('admin/*')) {
 
         try {
             \Divide\CMS\MenuItem::generateMenu($menu, null);
-        } catch(\Exception $ex){
+        } catch (\Exception $ex) {
 
         }
+    });
+
+    Menu::make('secondMenu', function ($menu) {
+
+        $menu->add('Az Egyház életmentő állomás', ['url' => URL::to('#')]);
+        $menu->add('Keresztény élet erőforrásai', ['url' => URL::to('#')]);
+        $menu->add('Katekézis', ['url' => URL::to('#')]);
+        $menu->add('Jelentkezés keresztelőre, esküvőre', ['url' => URL::to('#')]);
+        $menu->add('Nélkülözők megsegítése', ['url' => URL::to('#')]);
+        $menu->add('Támogatóink', ['url' => URL::to('#')]);
     });
 }
 

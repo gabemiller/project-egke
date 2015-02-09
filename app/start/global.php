@@ -85,3 +85,4 @@ require app_path() . '/filters.php';
 require app_path() . '/macros.php';
 require app_path() . '/events.php';
 require app_path() . '/breadcrumbs.php';
+require app_path() . '/views.php';
