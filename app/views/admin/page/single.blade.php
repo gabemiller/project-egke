@@ -4,6 +4,7 @@
     </td>
     <td>{{$page->id}}</td>
     <td>{{$page->title}}</td>
+    <td>{{URL::route('oldalak.show', array('id' => $page->id, 'title' => Str::slug($page->title)), false)}}</td>
     <td class="text-center">
         {{HTML::decode(HTML::linkRoute('admin.oldal.edit','<i class="fa fa-edit"></i> Módosítás',array('id'=>$page->id),array('class'=>'btn btn-sm btn-default')))}}
     </td>
