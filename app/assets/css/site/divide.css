@@ -269,6 +269,10 @@ a:active {
     background-color: #397054;
 }
 
+.side-menu:not(first-of-type){
+    margin-top: 20px;
+}
+
 /* Main page */
 
 .mainpage-divider h3 {
@@ -289,6 +293,10 @@ a:active {
 }
 
 /*Articles*/
+
+.articles{
+    min-height: 490px;
+}
 
 .articles h4 a,
 .articles h4 a:visited {

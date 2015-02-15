@@ -9,11 +9,20 @@
 
     <div class="row">
         <div class="col-xs-4">
+            <div class="side-menu">
             <img class="img-responsive"
                  src="{{URl::route('kep.show',['url'=>urlencode('assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
                  alt="Jézus Krisztus"
                  title="Jézus Krisztus"/>
             {{$secondMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
+            </div>
+            <div class="side-menu">
+                <img class="img-responsive"
+                     src="{{URl::route('kep.show',['url'=>urlencode('/img/gallery/2/1424029496.3997-nagybojt-2015.jpg'),'width'=>400,'height'=>400]) }}"
+                     alt="Nagyböjt"
+                     title="Nagyböjt"/>
+                {{$thirdMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
+            </div>
         </div>
         <div class="col-xs-8">
             <div class="row">
@@ -36,19 +45,6 @@
                     </div>
                 @endforeach
             </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-4">
-            <img class="img-responsive"
-                 src="{{URl::route('kep.show',['url'=>urlencode('/img/gallery/2/1424029496.3997-nagybojt-2015.jpg'),'width'=>400,'height'=>400]) }}"
-                 alt="Nagyböjt"
-                 title="Nagyböjt"/>
-            {{$thirdMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
-        </div>
-        <div class="col-xs-8">
-
         </div>
     </div>
 
