@@ -80,7 +80,22 @@ if (!Request::is('admin') && !Request::is('admin/*')) {
         $menu->add('Katekézis', ['url' => URL::to('#')]);
         $menu->add('Jelentkezés keresztelőre, esküvőre', ['url' => URL::to('#')]);
         $menu->add('Nélkülözők megsegítése', ['url' => URL::to('/oldal/14/nelkulozok-megsegitese-mit-kell-tennem')]);
-        $menu->add('Támogatóink', ['url' => URL::to('#')]);
+        $menu->add('Támogatóink', ['url' => URL::to('/oldal/23/tamogatoink')]);
+        $menu->add('Bizánci kislexikon', ['url' => URL::to('#')]);
+    });
+
+
+    Menu::make('thirdMenu',function($menu){
+
+        $menu->add('Nagyböjti irányelvek', ['url' => URL::to('/oldal/15/nagybojti-iranyelvek')]);
+        $menu->add('Nagyböjti szertartások - liturgikus szerkezete', ['url' => URL::to('/oldal/16/nagybojti-szertartasok-liturgikus-szerkezete')]);
+        $menu->add('Liturgikus gesztusaink', ['url' => URL::to('/oldal/17/liturgikus-gesztusaink')]);
+        $menu->add('Vasárnapi evangéliumok', ['url' => URL::to('/oldal/18/vasarnapi-evangeliumok')]);
+        $menu->add('Mi visz bennünket közelebb a gyónáshoz?', ['url' => URL::to('/oldal/19/mi-visz-bennunket-kozelebb-a-gyonashoz')]);
+        $menu->add('Krétai Szent András bűnbánati kánonja', ['url' => URL::to('/oldal/20/kretai-szent-andras-bunbanati-kanonja')]);
+        $menu->add('Szent Efrém fohász magyarázata, mint ellenőrző lista a lelkünk számára ', ['url' => URL::to('/oldal/21/szent-efrem-fohasz-magyarazata-mint-ellenorzo-lista-a-lelkunk-szamara')]);
+        $menu->add('A családom nagyböjti prioritása: Böjt, imádság, alamizsnálkodás ', ['url' => URL::to('/oldal/22/a-csaladom-nagybojti-prioritasa-bojt-imadsag-alamizsnalkodas')]);
+        $menu->add('Ajánlott nagyböjti olvasmányok', ['url' => URL::to('#')]);
     });
 }
 
@@ -179,7 +194,7 @@ if (Request::is('admin') || Request::is('admin/*')) {
             ->prepend('<i class="fa fa-angle-double-right "></i> ');
 
         /**
-         *
+         * Esemény menüpont
          */
         $menu->add('Esemény', ['class' => 'treeview'])
             ->append('<i class="fa pull-right fa-angle-left"></i>')
