@@ -269,7 +269,7 @@ a:active {
     background-color: #397054;
 }
 
-.side-menu:not(first-of-type){
+.side-menu:nth-of-type(n+2){
     margin-top: 20px;
 }
 

@@ -21,7 +21,7 @@ class HomeController extends \BaseController {
         $article = Article::where('published', '=', true)
             ->orderBy('created_at', 'DESC')
             ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
-            ->take(4)->get();
+            ->take(6)->get();
 
         $this->layout->content = View::make('index')
             ->with('articles', $article);
