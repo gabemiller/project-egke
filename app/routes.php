@@ -119,6 +119,10 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin'), function () {
 
 Route::group(array('prefix' => 'admin', 'before' => 'userNotLoggedIn|inGroup:Admin'), function () {
 
+    Route::get('elfinder', 'Barryvdh\Elfinder\ElfinderController@showIndex');
+
+    Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
+
     Route::get('elfinder/ckeditor4', 'Barryvdh\Elfinder\ElfinderController@showCKeditor4');
 
 });
