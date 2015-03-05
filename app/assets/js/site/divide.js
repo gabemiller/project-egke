@@ -13,5 +13,9 @@ $(document).ready(function () {
         margin: 10
     });
 
+    $('.event-carousel').owlCarousel({
+        items: 5,
+        margin: 10
+    });
 
 });
