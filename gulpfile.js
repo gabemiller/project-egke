@@ -78,16 +78,12 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('watch-site-css', function () {
+gulp.task('watch-site', function () {
     gulp.run('site-css');
-    gulp.watch('app/assets/css/site/**/*.css', ['site-css']);
-});
-
-gulp.task('watch-site-js', function () {
     gulp.run('site-js');
+    gulp.watch('app/assets/css/site/**/*.css', ['site-css']);
     gulp.watch('app/assets/js/site/**/*.js', ['site-js']);
 });
-
 
 gulp.task('watch-admin-css', function () {
     gulp.run('admin-css');
