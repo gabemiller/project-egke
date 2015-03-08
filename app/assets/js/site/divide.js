@@ -18,4 +18,9 @@ $(document).ready(function () {
         margin: 10
     });
 
+    $('#articles').masonry({
+        columnWidth: '.article-item',
+        itemSelector: '.article-item'
+    });
+
 });

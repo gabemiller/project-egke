@@ -25,9 +25,9 @@
             </div>
         </div>
         <div class="col-xs-8">
-            <div class="row">
+            <div id="articles" class="row">
                 @foreach($articles as $article)
-                    <div class="col-xs-6 articles-helper">
+                    <div class="col-xs-6 articles-helper article-item">
                         <div class="articles">
                             @if(count($article->gallery) && count($article->gallery->pictures))
                                 <img class="img-responsive"
