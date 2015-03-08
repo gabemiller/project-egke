@@ -48,6 +48,27 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="mainpage-divider">
+                <h3>Közelgő eseményünk</h3>
+                <hr>
+            </div>
+
+            <div class="event">
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-8">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="col-xs-12">

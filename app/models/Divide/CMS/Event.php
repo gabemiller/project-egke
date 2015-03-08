@@ -87,4 +87,22 @@ class Event extends \Eloquent {
         return (new Date($this->updated_at))->format($format);
     }
 
+    /**
+     * @param string $format
+     * @return string
+     */
+    public function getStartAt($format = 'Y. F j., l H:i')
+    {
+        return (new Date($this->start_at))->format($format);
+    }
+
+    /**
+     * @param string $format
+     * @return string
+     */
+    public function getEndAt($format = 'Y. F j., l H:i')
+    {
+        return (new Date($this->end_at))->format($format);
+    }
+
 }

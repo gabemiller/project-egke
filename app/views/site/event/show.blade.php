@@ -5,8 +5,8 @@
 @section('content')
 
 <div class="event">
-    <h1>{{HTML::link($event->getLink(),$event->title)}}</h1>
-    <p class="small">Kezdés: {{$event->start}} | Befejezés: {{$event->end}} </p>
+    <h1>{{$event->title}}</h1>
+    <p class="small">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}} </p>
     <div class="event-content">
         {{$event->content}}
     </div>
