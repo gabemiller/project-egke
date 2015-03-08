@@ -18,9 +18,14 @@ $(document).ready(function () {
         margin: 10
     });
 
-    $('#articles').masonry({
-        columnWidth: '.article-item',
-        itemSelector: '.article-item'
+
+    var articlesContainer = $('#articles');
+
+    articlesContainer.imagesLoaded( function() {
+        articlesContainer.masonry({
+            columnWidth: '.article-item',
+            itemSelector: '.article-item'
+        });
     });
 
 });
