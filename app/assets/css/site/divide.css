@@ -298,10 +298,6 @@ a:active {
     margin-bottom: 10px;
 }
 
-.articles-helper{
-    min-height: 490px;
-}
-
 .articles h4 a,
 .articles h4 a:visited {
     color: inherit;
