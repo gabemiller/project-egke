@@ -10,11 +10,11 @@
     <div class="row">
         <div class="col-xs-4">
             <div class="side-menu">
-                <img class="img-responsive"
-                     src="{{URl::route('kep.show',['url'=>urlencode('assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
-                     alt="Jézus Krisztus"
-                     title="Jézus Krisztus"/>
-                {{$secondMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
+            <img class="img-responsive"
+                 src="{{URl::route('kep.show',['url'=>urlencode('assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
+                 alt="Jézus Krisztus"
+                 title="Jézus Krisztus"/>
+            {{$secondMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
             </div>
             <div class="side-menu">
                 <img class="img-responsive"
@@ -39,7 +39,7 @@
 
                             <p class="text-muted">{{$article->getCreatedAt()}}</p>
 
-                            <div class="article-content-short">{{$article->getParragraph()}}</div>
+                            <div class="article-content-short">{{$article->content}}</div>
                             {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn btn-sm btn-more'))}}
                         </div>
                     </div>
@@ -48,46 +48,26 @@
         </div>
     </div>
 
-    @if(count($event))
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="mainpage-divider">
-                    <h3>Közelgő eseményünk</h3>
-                    <hr>
-                </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="mainpage-divider">
+                <h3>Közelgő eseményünk</h3>
+                <hr>
+            </div>
 
+            <div class="event">
+                <div class="row">
+                    <div class="col-xs-4">
 
-                <div class="event">
-                    <div class="row">
+                    </div>
+                    <div class="col-xs-8">
 
-                        @if(count($event->gallery) && count($event->gallery->pictures))
-                            <div class="col-xs-4">
-                                <img class="img-responsive"
-                                     src="{{URl::route('kep.show',['url'=>urlencode($event->gallery->pictures[0]->picture_path),'width'=>300,'height'=>200]) }}"
-                                     alt="{{$event->gallery->pictures[0]->name}}"
-                                     title="{{$event->gallery->pictures[0]->name}}"/>
-                            </div>
-                        @endif
-                        <div
-                        @if(count($event->gallery) && count($event->gallery->pictures))
-                            class="col-xs-8"
-                            @else
-                            class="col-xs-12"
-                                @endif
-                                >
-                            <h4>{{HTML::linkRoute('esemenyek.show',$event->title,array('id'=>$event->id,'title'=>\Str::slug($event->title)))}}</h4>
-
-                            <p class="small">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}}</p>
-
-                            <p>{{$event->getParragraph()}}</p>
-                            {{HTML::linkRoute('esemenyek.show','Bővebben',array('id'=>$event->id,'title'=>\Str::slug($event->title)),array('class'=>'btn btn-sm btn-more'))}}
-                        </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
-    @endif
+    </div>
 
 
     <div class="row">
