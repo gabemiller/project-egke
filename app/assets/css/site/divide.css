@@ -294,6 +294,10 @@ a:active {
 
 /*Articles*/
 
+.article-item{
+    margin-bottom: 10px;
+}
+
 .articles-helper{
     min-height: 490px;
 }
