@@ -35,7 +35,7 @@
                                      alt="{{$article->gallery->pictures[0]->name}}"
                                      title="{{$article->gallery->pictures[0]->name}}"/>
                             @endif
-                            <h2>{{HTML::link($article->getLink(),$article->title)}}</h2>
+                            <h3>{{HTML::linkRoute('hirek.show',$article->title,array('id'=>$article->id,'title'=>\Str::slug($article->title)))}}</h3>
 
                             <p class="text-muted">{{$article->getCreatedAt()}}</p>
 
