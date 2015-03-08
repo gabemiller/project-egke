@@ -35,7 +35,7 @@
                                      alt="{{$article->gallery->pictures[0]->name}}"
                                      title="{{$article->gallery->pictures[0]->name}}"/>
                             @endif
-                            <h4>{{HTML::link($article->getLink(),$article->title)}}</h4>
+                            <h2>{{HTML::link($article->getLink(),$article->title)}}</h2>
 
                             <p class="text-muted">{{$article->getCreatedAt()}}</p>
 

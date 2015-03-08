@@ -298,13 +298,33 @@ a:active {
     margin-bottom: 10px;
 }
 
+.articles h1 a,
+.articles h1 a:visited,
+.articles h2 a,
+.articles h2 a:visited,
+.articles h3 a,
+.articles h3 a:visited,
 .articles h4 a,
-.articles h4 a:visited {
+.articles h4 a:visited,
+.articles h5 a,
+.articles h5 a:visited,
+.articles h6 a,
+.articles h6 a:visited{
     color: inherit;
 }
 
+.articles h1 a:hover,
+.articles h1 a:active,
+.articles h2 a:hover,
+.articles h2 a:active,
+.articles h3 a:hover,
+.articles h3 a:active,
 .articles h4 a:hover,
-.articles h4 a:active {
+.articles h4 a:active,
+.articles h5 a:hover,
+.articles h5 a:active,
+.articles h6 a:hover,
+.articles h6 a:active{
     color: #FFB03B;
     text-decoration: none;
 }
