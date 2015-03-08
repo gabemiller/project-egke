@@ -5,7 +5,7 @@
 @section('content')
     <div id="articles" class="row">
         @foreach($articles as $article)
-            <div class="col-xs-4 articles-item">
+            <div class="col-xs-4 article-item">
                 <div class="articles">
                     @if(count($article->gallery) && count($article->gallery->pictures))
                         <img class="img-responsive"
