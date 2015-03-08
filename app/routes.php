@@ -81,7 +81,7 @@ if (!Request::is('admin') && !Request::is('admin/*')) {
         $menu->add('Jelentkezés keresztelőre, esküvőre', ['url' => URL::to('#')]);
         $menu->add('Nélkülözők megsegítése', ['url' => URL::to('/oldal/14/nelkulozok-megsegitese-mit-kell-tennem')]);
         $menu->add('Támogatóink', ['url' => URL::to('/oldal/23/tamogatoink')]);
-        $menu->add('Bizánci kislexikon', ['url' => URL::to('#')]);
+        $menu->add('Bizánci kislexikon', ['url' => URL::to('/documents/bizanci-kislexikon.pdf',['target'=>'_blank'])]);
     });
 
 
