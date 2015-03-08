@@ -3,9 +3,9 @@
     {{-- HTML::decode(Breadcrumbs::render('hirek.index')) --}}
 @stop
 @section('content')
-    <div class="row">
+    <div id="articles" class="row">
         @foreach($articles as $article)
-            <div class="col-xs-4 articles-helper">
+            <div class="col-xs-4 articles-item">
                 <div class="articles">
                     @if(count($article->gallery) && count($article->gallery->pictures))
                         <img class="img-responsive"
@@ -17,7 +17,7 @@
 
                     <p class="text-muted">{{$article->getCreatedAt()}}</p>
 
-                    <div class="article-content-short">{{$article->content}}</div>
+                    <p class="article-content">{{$article->getParragraph()}}</p>
                     {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn btn-sm btn-more'))}}
                 </div>
             </div>
