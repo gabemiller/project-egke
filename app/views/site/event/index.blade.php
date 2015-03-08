@@ -12,7 +12,7 @@
     <div class="tags">
         @if(sizeof($event->tagNames()) > 0)
         @foreach(\Divide\Helper\Tag::getTagByName($event->tagNames()) as $tag)
-        <span class="label">{{HTML::linkRoute('esemenyek.tag',$tag->name,array('id'=>$tag->id,'tagSlug'=>\Str::slug($tag->slug)))}}</span>
+        <span class="label label-default">{{HTML::linkRoute('esemenyek.tag',$tag->name,array('id'=>$tag->id,'tagSlug'=>\Str::slug($tag->slug)))}}</span>
         @endforeach
         @endif
     </div>
