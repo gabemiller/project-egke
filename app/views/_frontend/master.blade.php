@@ -3,6 +3,7 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="3YPTezKlD-bwLmtO8uCtl7tyu7i0x0l2RsmQ-3Ipu_k" />
 
 
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
