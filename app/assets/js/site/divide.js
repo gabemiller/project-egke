@@ -18,7 +18,6 @@ $(document).ready(function () {
         margin: 10
     });
 
-
     var articlesContainer = $('#articles');
 
     articlesContainer.imagesLoaded( function() {
