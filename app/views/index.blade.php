@@ -60,7 +60,7 @@
                 <div class="event">
                     <div class="row">
 
-                        @if(count($event->gallery) && count($event->gallery->pictures))
+                        @if(false && count($event->gallery) && count($event->gallery->pictures))
                             <div class="col-xs-4">
                                 <img class="img-responsive"
                                      src="{{URl::route('kep.show',['url'=>urlencode($event->gallery->pictures[0]->picture_path),'width'=>300,'height'=>200]) }}"
@@ -69,7 +69,7 @@
                             </div>
                         @endif
                         <div
-                        @if(count($event->gallery) && count($event->gallery->pictures))
+                        @if(false && count($event->gallery) && count($event->gallery->pictures))
                             class="col-xs-8"
                             @else
                             class="col-xs-12"
