@@ -6,7 +6,7 @@
 
 <div class="event">
     <h1>{{$event->title}}</h1>
-    <p class="small">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}} </p>
+    <p class="text-muted">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}} </p>
     <div class="event-content">
         {{$event->content}}
     </div>

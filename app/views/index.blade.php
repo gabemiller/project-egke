@@ -39,7 +39,7 @@
 
                             <p class="text-muted">{{$article->getCreatedAt()}}</p>
 
-                            <div class="article-content-short">{{$article->getParragraph(300)}}</div>
+                            <p class="article-content">{{$article->getParragraph()}}</p>
                             {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'btn btn-sm btn-more'))}}
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                 >
                             <h3>{{HTML::linkRoute('esemenyek.show',$event->title,array('id'=>$event->id,'title'=>\Str::slug($event->title)))}}</h3>
 
-                            <p class="small">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}}</p>
+                            <p class="text-muted">Az esemény ideje: {{$event->getStartAt()}} - {{$event->getEndAt()}}</p>
 
                             <p>{{$event->getParragraph()}}</p>
                             {{HTML::linkRoute('esemenyek.show','Bővebben',array('id'=>$event->id,'title'=>\Str::slug($event->title)),array('class'=>'btn btn-sm btn-more'))}}
