@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     minifyCSS = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    sass = require('gulp-sass');
 
 gulp.task('site-js', function () {
     return gulp.src('app/assets/js/site/**/*.js')
@@ -35,13 +36,8 @@ gulp.task('admin-js', function () {
 });
 
 gulp.task('site-css', function () {
-    return gulp.src('app/assets/css/site/**/*.css')
-        .pipe(order([
-            "plugins/blueimp-gallery.css",
-            "plugins/bootstrap-image-gallery.min.css",
-            "plugins/*.css",
-            "divide.css"
-        ]))
+    return gulp.src('app/assets/css/site/divide.scss')
+        .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
@@ -70,18 +66,11 @@ gulp.task('admin-css', function () {
         .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('watch', function () {
-    gulp.run('site-css');
-    gulp.watch('app/assets/css/site/**/*.css', ['site-css']);
-    gulp.watch('app/assets/js/site/**/*.js', ['site-js']);
-    gulp.watch('app/assets/css/admin/**/*.css',['admin-css']);
-});
-
 
 gulp.task('watch-site', function () {
     gulp.run('site-css');
     gulp.run('site-js');
-    gulp.watch('app/assets/css/site/**/*.css', ['site-css']);
+    gulp.watch('app/assets/css/site/divide.scss', ['site-css']);
     gulp.watch('app/assets/js/site/**/*.js', ['site-js']);
 });
 

@@ -86,7 +86,6 @@ class Article extends \Eloquent
      */
     public function getParragraph($words = 50, $end = '...')
     {
-        //return Str::limit(strip_tags($this->content), $characters, $end);
         return Str::words(trim(preg_replace('/<[^>]*>/',' ',$this->content)),$words,$end);
     }
 

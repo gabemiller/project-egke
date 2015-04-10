@@ -27,4 +27,24 @@ $(document).ready(function () {
         });
     });
 
+    // Rádió
+
+    var mp = $('.audio-player');
+
+    mp.mediaelementplayer({
+        audioWidth: '100%',
+        audioHeight: 30,
+        alwaysShowHours: true,
+        features: ['playpause', 'current', 'volume']
+    });
+
+    $('.radio-select').on('change', this, function () {
+        var audioSrc = $(this).val();
+        mp.each(function () {
+            this.player.pause();
+            this.player.setSrc(audioSrc);
+            this.player.play();
+        });
+    });
+
 });

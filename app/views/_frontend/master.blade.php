@@ -12,9 +12,8 @@
     <!--[if lt IE 9]>
     {{ HTML::script('//html5shim.googlecode.com/svn/trunk/html5.js') }}
     <![endif]-->
-    {{
-    HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext')
-    }}
+
+    {{HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
     {{ HTML::style('css/bootstrap.min.css') }}
     {{ HTML::style('css/divide.min.css') }}
 
