@@ -11,7 +11,7 @@
         <div class="col-xs-4">
             <div class="side-menu">
                 <img class="img-responsive"
-                     src="{{URl::route('kep.show',['url'=>urlencode('assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
+                     src="{{URl::route('kep.show',['url'=>urlencode('/assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
                      alt="Jézus Krisztus"
                      title="Jézus Krisztus"/>
                 {{$secondMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
@@ -22,6 +22,27 @@
                      alt="Nagyböjt"
                      title="Nagyböjt"/>
                 {{$thirdMenu->asUl(['class'=>'list-unstyled mainpage-menu'])}}
+            </div>
+            <div>
+                <img class="img-responsive"
+                     src="{{URl::route('kep.show',['url'=>urlencode('/assets/meghivo.jpg'),'width'=>900,'height'=>205]) }}"
+                     alt="Nagyböjt"
+                     title="Nagyböjt"/>
+                <h3 class="text-center color-yellow">Meghívó</h3>
+                <p>Minden megkeresztelt ember, annak az új életnek a tanúja, amit Krisztus adott nekünk az Egyháza révén.
+                    A görögkatolikus egyházunk tudatában van, hogy sok jó ember él a keresztény egyházon kívül is,
+                    de csak Jézus Krisztus képes Istenhez legközelebb vinni bennünket, a többi vallás nem képes erre.
+                    A görögkatolikus egyház, nem csupán tanok összessége, rituális gyakorlatok és szokások, hanem egy életforma,
+                    a krisztusi élet. A mi hitünk maga az ÉLET. Ez egy olyan élet, ami igazabb, teljesebb, bőséges és hitelesebb,
+                    mint bármely élet.Ez az ÉLET az örök, aminek nincs vége, amely fölött még a halálnak sincs hatalma.</p>
+                <p class="text-center">Szeretettel meghívom: csatlakozzon hozzánk, hogy részesülhessen a Krisztusban való új életbe.</p>
+                <h4 class="text-center color-yellow">Isten hozta új otthonába!</h4>
+                <p class="text-center">Görögkatolikus, aki eddig nem volt aktív a hitéletbe? Nem tagja egyik egyháznak sem,
+                    vagy amibe keresztelték nem érzi magát otthon?Ezt a különleges meghívást szeretném önnek átadni:</p>
+                <h4 class="text-center color-yellow">Jöjjön velünk!</h4>
+                <p class="text-center">Kölcsönösen szükségünk van egymásra,<br>
+                   szeretnénk, ha családunk tagja lenne!<br>
+                   Pacsai János parókus</p>
             </div>
         </div>
         <div class="col-xs-8">

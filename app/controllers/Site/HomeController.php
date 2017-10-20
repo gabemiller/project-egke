@@ -22,7 +22,7 @@ class HomeController extends \BaseController {
         $article = Article::where('published', '=', true)
             ->orderBy('created_at', 'DESC')
             ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
-            ->take(6)->get();
+            ->take(10)->get();
 
         $event = Event::orderBy('created_at','desc')
             ->limit(1)
