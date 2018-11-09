@@ -9,6 +9,14 @@
 
     <div class="row">
         <div class="col-xs-4">
+			<div class="side-menu">
+				<a href="{{URL::to('/oldal/27/efop-137-17-2017-00111')}}">
+					<img class="img-responsive"
+						 src="{{URl::route('kep.show',['url'=>urlencode('/assets/efop_1_3_7_17_2017_00111_c_fekvo_kep.jpg'),'width'=>400,'height'=>400]) }}"
+						 alt="EFOP-1.3.7-17-2017-00111"
+						 title="EFOP-1.3.7-17-2017-00111"/>
+				</a>
+			</div>
             <div class="side-menu">
                 <img class="img-responsive"
                      src="{{URl::route('kep.show',['url'=>urlencode('/assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
