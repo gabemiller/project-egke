@@ -12,7 +12,7 @@
 			<div class="side-menu">
 				<a href="{{URL::to('/oldal/27/efop-137-17-2017-00111')}}">
 					<img class="img-responsive"
-						 src="/assets/efop_1_3_7_17_2017_00111_c_fekvo_kep.jpg"
+						 src="/img/gallery/164/1586285445.2561-muveljuk-kertjeinket.jpg"
 						 alt="EFOP-1.3.7-17-2017-00111"
 						 title="EFOP-1.3.7-17-2017-00111"/>
 				</a>
