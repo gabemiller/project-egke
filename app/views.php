@@ -9,3 +9,7 @@ View::composer('index', function ($view) {
 
     $view->with('quotes',$quotes);
 });
+
+View::composer('_frontend.master',function($view){
+    $view->with('am',\Cookie::get('am'));
+});

@@ -53,6 +53,16 @@ Route::group(array('namespace' => 'Site'), function () {
 
 });
 
+Route::get('akadalymentes/{am}', function ($am) {
+
+    if ($am == 'letrehoz') {
+        $cookie = \Cookie::forever('am', 'true');
+    } else {
+        $cookie = \Cookie::forget('am');
+    }
+
+    return \Redirect::back()->withCookie($cookie);
+});
 
 /**
  * -----------------------------------------------------------------------------
