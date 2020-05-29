@@ -1,3 +1,13 @@
+<a class="head-eu-container" href="{{URL::to('/oldal/26/efop-121-15-2016-01007')}}">
+    <img class="img-responsive"
+         src="/img/gallery/165/1590339193.0643-efop-121-15-2016-01007-vissza.jpg"
+         alt="EFOP 1.2.1-15-2016-01007 Vissza az alapokhoz"
+         title="EFOP 1.2.1-15-2016-01007 Vissza az alapokhoz"/>
+    <img class="img-responsive"
+         src="/img/gallery/165/1590333612.4648-efop-121-15-2016-01007-vissza.jpg"
+         alt="EFOP 1.2.1-15-2016-01007 Vissza az alapokhoz"
+         title="EFOP 1.2.1-15-2016-01007 Vissza az alapokhoz"/>
+</a>
 <header>
     <div class="container">
         <div class="row">

@@ -9,14 +9,6 @@
 
     <div class="row">
         <div class="col-xs-4">
-			<div class="side-menu">
-				<a href="{{URL::to('/oldal/27/efop-137-17-2017-00111')}}">
-					<img class="img-responsive"
-						 src="/img/gallery/164/1586285445.2561-muveljuk-kertjeinket.jpg"
-						 alt="EFOP-1.3.7-17-2017-00111"
-						 title="EFOP-1.3.7-17-2017-00111"/>
-				</a>
-			</div>
             <div class="side-menu">
                 <img class="img-responsive"
                      src="{{URl::route('kep.show',['url'=>urlencode('/assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
