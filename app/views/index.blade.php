@@ -10,6 +10,14 @@
     <div class="row">
         <div class="col-xs-4">
             <div class="side-menu">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/SRQ9DYmYpWU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="side-menu">
                 <img class="img-responsive"
                      src="{{URl::route('kep.show',['url'=>urlencode('/assets/krisztus.jpg'),'width'=>400,'height'=>400]) }}"
                      alt="Jézus Krisztus"
